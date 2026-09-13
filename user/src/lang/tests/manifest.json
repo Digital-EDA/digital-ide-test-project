@@ -1,0 +1,87 @@
+{
+  "version": 2,
+  "files": [
+    "svlog/lang_sv_include.svh",
+    "svlog/lang_sv_pkg.sv",
+    "svlog/lang_sv_leaf.sv",
+    "svlog/lang_sv_core.sv",
+    "svlog/lang_sv_advanced.sv",
+    "vlog/lang_vlog_bridge.v",
+    "vhdl/lang_vhdl_pkg.vhd",
+    "vhdl/lang_vhdl_stage.vhd",
+    "vhdl/lang_vhdl_top.vhd"
+  ],
+  "queries": {
+    "sv": {
+      "document": "svlog/lang_sv_core.sv",
+      "types_document": "svlog/lang_sv_pkg.sv",
+      "module_document": "svlog/lang_sv_leaf.sv",
+      "hover_document": "svlog/lang_sv_core.sv",
+      "local_symbol": "captured = value",
+      "module_use": "lang_sv_leaf #",
+      "include_directive": "`include \"lang_sv_include.svh\"",
+      "system_task": "$display",
+      "syntax_document": "svlog/lang_sv_advanced.sv"
+    },
+    "verilog": {
+      "document": "vlog/lang_vlog_bridge.v",
+      "module_name": "lang_vlog_bridge"
+    },
+    "vhdl": {
+      "document": "vhdl/lang_vhdl_top.vhd",
+      "types_document": "vhdl/lang_vhdl_pkg.vhd",
+      "entity_document": "vhdl/lang_vhdl_stage.vhd",
+      "entity_use": "entity work.lang_vhdl_stage",
+      "port_use": "input_a => input_a"
+    }
+  },
+  "syntax_coverage": [
+    {"feature": "time units and attributes", "files": ["svlog/lang_sv_advanced.sv"], "markers": ["timeunit", "timeprecision", "(* fixture"]},
+    {"feature": "package import/export and parameter types", "files": ["svlog/lang_sv_advanced.sv"], "markers": ["package lang_syntax_pkg", "import lang_syntax_pkg::*", "import lang_syntax_pkg::*, lang_syntax_pkg::DEFAULT_WIDTH", "export *::*", "parameter type"]},
+    {"feature": "ANSI/non-ANSI modules and module parameter lists", "files": ["svlog/lang_sv_advanced.sv", "vlog/lang_vlog_bridge.v"], "markers": ["module lang_sv_advanced #", "module lang_nonansi_probe", "input  [WIDTH-1:0] data_in"]},
+    {"feature": "interfaces, nested clocking and modports", "files": ["svlog/lang_sv_advanced.sv"], "markers": ["interface lang_bus_if", "interface lang_syntax_if", "interface child", "interface lang_wildcard_if(.*)", "clocking cb", "modport master", "ref PORT_T", "virtual interface"]},
+    {"feature": "extern declarations, macromodule, primitive and UDP table", "files": ["svlog/lang_sv_advanced.sv"], "markers": ["extern interface", "extern macromodule", "extern primitive", "macromodule lang_legacy_macro", "primitive lang_ext_udp", "endtable"]},
+    {"feature": "nets, strengths, delays, alias and trireg", "files": ["svlog/lang_sv_advanced.sv"], "markers": ["wor [WIDTH-1:0]", "assign (supply0, weak1)", "alias {wired_or", "trireg (large)"]},
+    {"feature": "procedural assignment, fork and wait controls", "files": ["svlog/lang_sv_advanced.sv"], "markers": ["wait fork", "wait_order", "fork : worker_fork", "disable fork", "deassign", "force procedural_signal", "release procedural_signal", "#1step"]},
+    {"feature": "case variants, matches and random case", "files": ["svlog/lang_sv_advanced.sv"], "markers": ["unique0 casez", "unique0 casex", "case (q) inside", "case (tagged_value) matches", "&&&", "randcase"]},
+    {"feature": "always variants, loops and array iteration", "files": ["svlog/lang_sv_advanced.sv"], "markers": ["always_ff", "always_comb", "always_latch", "always @*", "foreach (matrix", "break", "continue"]},
+    {"feature": "enum, struct, union and tagged union typedefs", "files": ["svlog/lang_sv_advanced.sv"], "markers": ["typedef enum", "typedef struct packed", "typedef union packed", "typedef union tagged"]},
+    {"feature": "generate for/if/case and named scopes", "files": ["svlog/lang_sv_advanced.sv"], "markers": ["generate", "for (g = 0", "generated_wide", "case (WIDTH)", "generated_many", "module lang_sv_feature_probe", "feature_bits"]},
+    {"feature": "SVA sequence/property/assert/assume/cover", "files": ["svlog/lang_sv_advanced.sv"], "markers": ["sequence active_sequence", "sequence feature_reset_sequence", "property reset_to_idle", "property rich_temporal", "strong(", "intersect", "first_match", "assert property", "assume property", "cover sequence", "assumption_label: assume final"]},
+    {"feature": "clocking, temporal controls and default clocking", "files": ["svlog/lang_sv_advanced.sv"], "markers": ["default clocking", "default disable iff", "global clocking", "clocking edge_clock", "expect (", "restrict property", "->>", "##(2 + 1)"]},
+    {"feature": "checker and bind", "files": ["svlog/lang_sv_advanced.sv"], "markers": ["checker lang_checker", "endchecker", "bind lang_sv_advanced"]},
+    {"feature": "specify paths and timing checks", "files": ["svlog/lang_sv_advanced.sv"], "markers": ["specify", "specparam", "$setup", "$hold"]},
+    {"feature": "program, configuration, defparam and switch primitives", "files": ["svlog/lang_sv_advanced.sv"], "markers": ["extern program", "program lang_external_program", "endprogram", "config lang_syntax_config", "endconfig", "defparam", "rcmos"]},
+    {"feature": "classes, inheritance, interface class, forward declarations and extern methods", "files": ["svlog/lang_sv_advanced.sv"], "markers": ["class generic_item", "extern function T transform", "extern static function real", "extends lang_base implements", "interface class lang_contract", "typedef class lang_forward", "function :final"]},
+    {"feature": "constraints, randsequence and covergroups", "files": ["svlog/lang_sv_advanced.sv", "svlog/lang_sv_pkg.sv"], "markers": ["constraint value_limit", "randsequence(main)", "covergroup syntax_coverage", "covergroup event_coverage @@", "covergroup sampled_coverage with function sample", "wildcard bins", "bins data_values[]", "cross state_cp"]},
+    {"feature": "final procedural block and operator families", "files": ["svlog/lang_sv_advanced.sv"], "markers": ["final begin", "**", "===", "==?", "~^"]},
+    {"feature": "dynamic arrays, queues, streaming and type operators", "files": ["svlog/lang_sv_advanced.sv"], "markers": ["dynamic_storage[]", "queue_storage[$:3]", "{<< byte", "type(dynamic_storage)", "$bits(data_out)"]},
+    {"feature": "nettype, let and DPI import/export", "files": ["svlog/lang_sv_advanced.sv"], "markers": ["nettype", "let same_value", "import \"DPI-C\"", "export \"DPI-C\""]}
+  ],
+  "verilog_coverage": {
+    "file": "vlog/lang_vlog_bridge.v",
+    "required_markers": [
+      "input  [WIDTH-1:0] data_in",
+      "wire [WIDTH-1:0] inverted_data",
+      "reg [WIDTH-1:0] legacy_register",
+      "integer bit_index",
+      "tri [WIDTH-1:0] tri_data",
+      "wand [WIDTH-1:0] wired_and",
+      "wor [WIDTH-1:0] wired_or",
+      "wire logic;",
+      "reg bit;",
+      "integer priority;",
+      "wire interface;",
+      "wire package;",
+      "wire class;",
+      "function [WIDTH-1:0] invert_value",
+      "task record_value",
+      "always @*",
+      "casez",
+      "casex",
+      "genvar generated_index",
+      "generate"
+    ],
+    "forbidden_systemverilog_constructs": ["always_ff", "always_comb", "typedef ", "interface class", "package lang_", "class lang_"]
+  }
+}

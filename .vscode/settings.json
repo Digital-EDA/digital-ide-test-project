@@ -1,0 +1,12 @@
+{
+    "digital-ide.standard.systemverilog": "2023",
+    "digital-ide.function.lsp.systemverilog.expandIncludes": true,
+    "digital-ide.standard.vhdl": "2008",
+    "digital-ide.lib.vhdl.path": "",
+    "digital-ide.function.lsp.diagnostics.overrides": {
+        "MissingTimeScale": "off"
+    },
+    "digital-ide.function.simulate.fastSimulator": "modelsim",
+    "digital-ide.prj.modelsim.install.path": "/opt/mentor/Modelsim20.4/modeltech/bin",
+    "digital-ide.prj.vivado.install.path": "/opt/xilinx/Vivado/2022.2/bin"
+}
