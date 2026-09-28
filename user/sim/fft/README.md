@@ -8,11 +8,40 @@ and checks all three FFT implementations in the fixture:
 * the Xilinx `xfft_v9` AXI-stream IP generated from
   `user/ip/xfft_v9/xfft_v9.xci`.
 
-The test drives an impulse frame into each implementation, checks that every
-implementation produces data, verifies the Xilinx 64-sample `TLAST` boundary,
-and fails on unknown data or Xilinx input framing events. The workspace
-property selects `fft_ifft_tb` as the single simulation top; files under
-`user/sim` are discovered recursively.
+All four instances use 64-point transforms. The shared FFT/IFFT instances set
+`TOTAL_STEP = 6`; their input/output width remains 12 bits.
+
+The test sends **three rounds of four frames**, continuously without resetting
+between frames (12 frames / 768 input samples per instance):
+
+| Case in each round | Real input | Imaginary input |
+| --- | --- | --- |
+| 0 | Impulse: first sample `A`, then zeros | 0 |
+| 1 | `round(A * cos(2*pi*1*n/64 + phase))` | 0 |
+| 2 | `round(A * cos(2*pi*4*n/64 + phase))` | 0 |
+| 3 | `round(A * cos(2*pi*11*n/64 + phase))` | 0 |
+
+For rounds 1, 2 and 3, `A` is 64, 128 and 256; `phase` is 0, pi/4
+and pi/2, respectively. Here `round(x)` means `floor(x + 0.5)`. Every instance receives
+the same signed integer samples, packed according to its own interface.
+The Xilinx input respects AXI backpressure, so its timing can differ.
+Zero input then flushes the continuously enabled user/shared pipelines.
+
+The checks require 12 complete 64-sample frames from each instance, reject
+X/Z and all-zero test frames, and check frame synchronization. The Xilinx
+output must assert `TLAST` exactly on sample 64 of every frame, with no
+unexpected/missing input `TLAST` events. A global watchdog also covers stalled
+configuration/data handshakes. A successful run prints
+`FFT/IFFT regression passed: 64 points, 3 rounds, 12 frames per DUT`.
+
+This remains a data-flow/frame regression, not a numerical FFT accuracy test:
+it does not compare against a software DFT or compensate for each core's
+scaling and output ordering. The FFT and IFFT instances run in parallel;
+they do not form an FFT-to-IFFT round trip. For an IFFT instance, these cosine
+samples are frequency-domain input coefficients.
+
+The workspace property selects `fft_ifft_tb` as the single simulation top;
+files under `user/sim` are discovered recursively.
 
 ## Vivado/xsim
 

@@ -105,7 +105,7 @@
 //
 module	butterfly(i_clk, i_reset, i_ce, i_coef, i_left, i_right, i_aux,
 		o_left, o_right, o_aux);
-	// Public changeable parameters ...
+	// Public changeable parameters
 	parameter IWIDTH=16,CWIDTH=20,OWIDTH=17;
 	parameter	SHIFT=0;
 	// The number of clocks per each i_ce.  The actual number can be
@@ -682,7 +682,7 @@ module	butterfly(i_clk, i_reset, i_ce, i_coef, i_left, i_right, i_aux,
 	//	     +1 bit for the add/subtract
 	//	+CWIDTH bits for the coefficient multiply
 	//	     +1 bit for the add/subtract in the complex multiply
-	//	 ------
+	//	 
 	//	 (IWIDTH+CWIDTH+2) bits at full precision.
 	//
 	// However, the coefficient multiply multiplied by a maximum value
@@ -691,7 +691,7 @@ module	butterfly(i_clk, i_reset, i_ce, i_coef, i_left, i_right, i_aux,
 	//	       +1 bit for the add/subtract
 	//	+CWIDTH-2 bits for the coefficient multiply
 	//	       +1 (optional) bit for the add/subtract in the cpx mpy.
-	//	 -------- ... multiply.  (This last bit may be shifted out.)
+	//	  ... multiply.  (This last bit may be shifted out.)
 	//	 (IWIDTH+CWIDTH) valid output bits.
 	// Now, if the user wants to keep any extras of these (via OWIDTH),
 	// or if he wishes to arbitrarily shift some of these off (via

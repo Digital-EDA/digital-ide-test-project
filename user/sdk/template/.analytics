@@ -1,0 +1,7 @@
+timestamp=[2026-09-21 22:25:17], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.354, duration_ms=354, data={}
+timestamp=[2026-09-21 22:25:25], mode=APP_CREATION, duration=0:00:07.173, duration_ms=7173, data={name=template, project_type=sdk, os=standalone, processor=ps7_cortexa9, runtime=cpp, platform=template_1, application_type=application}
+timestamp=[2026-09-21 22:36:24], mode=PLATFORM_GENERATION, duration=0:00:05.443, duration_ms=5443, data={name=template_1}
+timestamp=[2026-09-21 22:36:25], mode=BUILD, duration=0:00:00.214, duration_ms=214, data={name=template, configuration=Debug, clean_build=false}
+timestamp=[2026-09-22 16:40:37], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.342, duration_ms=342, data={}
+timestamp=[2026-09-22 16:40:47], mode=PLATFORM_GENERATION, duration=0:00:04.708, duration_ms=4708, data={name=template_1}
+timestamp=[2026-09-22 16:40:47], mode=BUILD, duration=0:00:00.213, duration_ms=213, data={name=template, configuration=Debug, clean_build=false}

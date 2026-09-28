@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="template" location="/home/dide/project/digital-ide-0.5.x/tests/project/temp/user/sdk/template/template" platform="/home/dide/project/digital-ide-0.5.x/tests/project/temp/user/sdk/template/template_1/export/template_1/template_1.xpfm" platformUID="xilinx.com::system_wrapper:1.0(custom)" systemProject="template_system" sysConfig="template_1" runtime="cpp" cpu="standalone_domain" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="308953b91d650e7060b65f37b699cf68">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.410388722" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.2006849962" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

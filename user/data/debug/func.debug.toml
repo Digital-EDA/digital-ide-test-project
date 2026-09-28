@@ -1,0 +1,18 @@
+[ila.cores."0"]
+label = "condition_capture"
+data_depth = 1024
+pipe_stages = 1
+capture_condition = "sample_valid == 1"
+trigger_condition = "condition_counter == 129"
+
+[ila.cores."1"]
+label = "immediate_capture"
+data_depth = 1024
+pipe_stages = 0
+
+[vio.cores."0"]
+label = "control_loopback"
+input_activity = true
+
+[trigger]
+cascades = [{ from = 0, to = 1 }]

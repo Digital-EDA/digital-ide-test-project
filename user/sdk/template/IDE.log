@@ -1,0 +1,17 @@
+22:25:16 DEBUG : Logs will be stored at '/home/dide/project/digital-ide-0.5.x/tests/project/temp/user/sdk/template/IDE.log'.
+22:25:17 INFO  : Registering command handlers for Vitis TCF services
+22:25:17 INFO  : Result from executing command 'getProjects': 
+22:25:17 INFO  : Platform repository initialization has completed.
+22:25:18 INFO  : Successfully done query RDI_DATADIR 
+22:25:18 INFO  : plnx-install-location is set to ''
+22:25:22 INFO  : Platform 'template_1' is added to custom repositories.
+22:25:25 INFO  : Result from executing command 'getProjects': template
+22:25:25 INFO  : Result from executing command 'reportApp': {fsblpath=fsbl is not available in the platform., Platform Path=/home/dide/project/digital-ide-0.5.x/tests/project/temp/user/sdk/template/template_1/export/template_1/template_1.xpfm, Domain=standalone_domain, platform=template_1}
+22:36:24 INFO  : Checking for BSP changes to sync application flags for project 'template'...
+16:40:37 DEBUG : Logs will be stored at '/home/dide/project/digital-ide-0.5.x/tests/project/temp/user/sdk/template/IDE.log'.
+16:40:37 INFO  : Registering command handlers for Vitis TCF services
+16:40:37 INFO  : Platform repository initialization has completed.
+16:40:37 INFO  : Result from executing command 'getProjects': template
+16:40:37 INFO  : Result from executing command 'reportApp': {fsblpath=/home/dide/project/digital-ide-0.5.x/tests/project/temp/user/sdk/template/template_1/export/template_1/sw/template_1/boot/fsbl.elf, Platform Path=/home/dide/project/digital-ide-0.5.x/tests/project/temp/user/sdk/template/template_1/export/template_1/template_1.xpfm, Domain=standalone_domain, platform=template_1}
+16:40:42 INFO  : plnx-install-location is set to ''
+16:40:47 INFO  : Checking for BSP changes to sync application flags for project 'template'...

@@ -1,0 +1,26 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Digital IDE: Zynq-7000 ARM Cortex-A9 template",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "/home/dide/project/digital-ide-0.5.x/tests/project/temp/user/sdk/template/template/Debug/template.elf",
+            "cwd": "${workspaceFolder}",
+            "MIMode": "gdb",
+            "targetArchitecture": "arm",
+            "miDebuggerPath": "/opt/xilinx/Vitis/2022.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin/arm-none-eabi-gdb",
+            "miDebuggerServerAddress": "127.0.0.1:3000",
+            "stopAtEntry": true,
+            "externalConsole": false,
+            "postRemoteConnectCommands": [
+                {
+                    "description": "Download the selected ELF through the Xilinx GDB server",
+                    "text": "load",
+                    "ignoreFailures": false
+                }
+            ],
+            "launchCompleteCommand": "exec-continue"
+        }
+    ]
+}
