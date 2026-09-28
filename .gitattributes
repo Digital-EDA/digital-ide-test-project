@@ -1,0 +1,16 @@
+
+# Preserve binary artifacts in workspace snapshots.
+*.mp4 binary
+*.png binary
+*.ico binary
+*.bit binary
+*.dcp binary
+*.hwdef binary
+*.hdf binary
+*.xsa binary
+*.elf binary
+*.a binary
+*.so binary
+*.dll binary
+*.ltxbin binary
+*.pdb binary
