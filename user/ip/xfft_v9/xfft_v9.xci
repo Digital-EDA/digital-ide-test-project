@@ -7,7 +7,7 @@
     "gen_directory": ".",
     "parameters": {
       "component_parameters": {
-        "Component_Name": [ { "value": "xfft_v7_1", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
+        "Component_Name": [ { "value": "xfft_v9", "resolve_type": "user", "usage": "all" } ],
         "channels": [ { "value": "1", "resolve_type": "user", "usage": "all" } ],
         "transform_length": [ { "value": "64", "value_src": "user", "resolve_type": "user", "usage": "all" } ],
         "target_clock_frequency": [ { "value": "200", "value_src": "user", "resolve_type": "user", "format": "long", "usage": "all" } ],
@@ -76,7 +76,7 @@
         "BOARD_CONNECTIONS": [ { "value": "" } ],
         "DEVICE": [ { "value": "xc7z010" } ],
         "PACKAGE": [ { "value": "clg400" } ],
-        "PREFHDL": [ { "value": "VERILOG" } ],
+        "PREFHDL": [ { "value": "VHDL" } ],
         "SILICON_REVISION": [ { "value": "" } ],
         "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
         "SPEEDGRADE": [ { "value": "-1" } ],

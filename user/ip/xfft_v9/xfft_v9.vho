@@ -1,4 +1,4 @@
--- (c) Copyright 1995-2025 Xilinx, Inc. All rights reserved.
+-- (c) Copyright 1995-2026 Xilinx, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of Xilinx, Inc. and is protected under U.S. and
@@ -45,9 +45,8 @@
 -- PART OF THIS FILE AT ALL TIMES.
 -- 
 -- DO NOT MODIFY THIS FILE.
-
 -- IP VLNV: xilinx.com:ip:xfft:9.1
--- IP Revision: 1
+-- IP Revision: 8
 
 -- The following code must appear in the VHDL architecture header.
 
@@ -72,7 +71,7 @@ COMPONENT xfft_v9
     event_tlast_missing : OUT STD_LOGIC;
     event_status_channel_halt : OUT STD_LOGIC;
     event_data_in_channel_halt : OUT STD_LOGIC;
-    event_data_out_channel_halt : OUT STD_LOGIC
+    event_data_out_channel_halt : OUT STD_LOGIC 
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -108,4 +107,6 @@ your_instance_name : xfft_v9
 -- You must compile the wrapper file xfft_v9.vhd when simulating
 -- the core, xfft_v9. When compiling the wrapper file, be sure to
 -- reference the VHDL simulation library.
+
+
 

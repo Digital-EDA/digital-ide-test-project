@@ -7,6 +7,8 @@
     "digital-ide.prj.vivado.install.path": "/opt/xilinx/Vivado/2022.2/bin",
     "digital-ide.prj.xsdk.install.path": "/opt/xilinx/Vitis/2022.2/bin",
     "digital-ide.function.lsp.diagnostics.overrides": {
-        "MissingTimeScale": "off"
+        "MissingTimeScale": "off",
+        "misplaced_attribute_spec": "off",
+        "unresolved": "off"
     },
 }
