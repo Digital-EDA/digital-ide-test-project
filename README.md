@@ -44,8 +44,8 @@ wave.dws                 波形会话快照
 ## 开始使用
 
 ```bash
-git clone https://github.com/Digital-EDA/digital-ide-test-project.git
-cd digital-ide-test-project
+git clone https://github.com/Digital-EDA/digital-ide-test.git
+cd digital-ide-test
 code .
 ```
 
